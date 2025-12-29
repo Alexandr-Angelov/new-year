@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>С новым годом</title>
+    <style>
+        header {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #85DADA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: #093636;
+        }
+
+        #passwordbox {
+            display: block;
+            margin: 100px auto;
+            padding: 10px;
+            font-size: 26px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordBox = document.getElementById('passwordbox');
+            passwordBox.addEventListener('input', function() {
+                if (passwordBox.value === '12345') {
+                    window.location.href = 'celebration.html';
+                }
+            });
+        });
+    </script>
+</head>
+<header>
+    <h1>С новым годом!</h1>
+</header>
+<body>
+    <input id = "passwordbox" type="text" placeholder="Введите код">
+</body>
+</html>
