@@ -23,10 +23,32 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const sisterpw = '1X5B9L';
+            const mompw = '7G2K8X';
+            const dadpw = '3M4N6X';
+            const vitalikpw = '0N1Y2W';
             const passwordBox = document.getElementById('passwordbox');
             passwordBox.addEventListener('input', function() {
-                if (passwordBox.value === '12345') {
-                    window.location.href = 'celebration.html';
+                if (passwordBox.value === sisterpw) {
+                    window.location.href = 'sister.html';
+                }
+            });
+            const passwordBox_ = document.getElementById('passwordbox');
+            passwordBox_.addEventListener('input', function() {
+                if (passwordBox_.value === mompw) {
+                    window.location.href = 'mom.html';
+                }
+            });
+            const passwordBox__ = document.getElementById('passwordbox');
+            passwordBox__.addEventListener('input', function() {
+                if (passwordBox__.value === dadpw) {
+                    window.location.href = 'dad.html';
+                }
+            });
+            const passwordBox___ = document.getElementById('passwordbox');
+            passwordBox___.addEventListener('input', function() {
+                if (passwordBox___.value === vitalikpw) {
+                    window.location.href = 'vitalik.html';
                 }
             });
         });
