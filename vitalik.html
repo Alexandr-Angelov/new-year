@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Виталик</title>
+    <style>
+        header {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #85DADA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: #093636;
+        }
+
+        #passwordbox {
+            display: block;
+            margin: 100px auto;
+            padding: 10px;
+            font-size: 26px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 50px;
+            margin-top: 50px;
+        }
+
+        .music_1, .music_2 {
+            display: block;
+            margin: 20px auto;
+            width: 10%;
+            height: 5%;
+            border: none;
+            background-size: cover;
+            cursor: pointer;
+            background: linear-gradient(to right, #85DADA, #093636);
+        }
+
+        .stop {
+            background-color: tomato;
+            display: block;
+            margin: 20px auto;
+            width: 10%;
+            height: 5%;
+            border: none;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .bh {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let music_1 = new Audio('Music/vitalik/Плач Єремії - Вона.mp3');
+            let music_2 = new Audio('Music/vitalik/Linkin Park - Numb.mp3');
+
+            document.querySelector('.music_1').addEventListener('click', function() {
+                music_1.play();
+            });
+
+            document.querySelector('.music_2').addEventListener('click', function() {
+                music_2.play();
+            });
+            document.querySelector('.stop').addEventListener('click', function() {
+                music_1.pause();
+                music_1.currentTime = 0;
+                music_2.pause();
+                music_2.currentTime = 0;
+            });
+        });
+    </script>
+</head>
+<header>
+    <h1>Виталик с новым годом!</h1>
+</header>
+<body>
+    <p>Виталик с новым годом! Я тебя очень люблю!</p>
+    <h1 class="bh">Твои две любимых музыки</h1>
+    <button class="music_1">Плач Єремії - Вона</button>
+    <button class="music_2">Linkin Park - Numb</button>
+    <button class="stop">Остановить музыку</button>
+</body>
+</html>
